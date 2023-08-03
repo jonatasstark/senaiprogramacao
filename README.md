@@ -1,2 +1,3 @@
 # senaiprogramacao
-códigos de programação Senai
+Códigos de programação Senai
+Trabalhos e exercícios
