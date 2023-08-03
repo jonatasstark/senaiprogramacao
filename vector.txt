@@ -1,0 +1,103 @@
+Inclusão da biblioteca:
+Para usar a biblioteca <vector>, você precisa incluí-la no início do seu código:
+
+cpp
+Copy code
+#include <vector>
+Declaração e inicialização de um vetor:
+Você pode declarar e inicializar um vetor de várias maneiras, como:
+
+cpp
+Copy code
+std::vector<int> meuVetor;              // Vetor vazio de inteiros
+std::vector<double> outroVetor(5, 2.0); // Vetor com 5 elementos iniciais de valor 2.0
+Adição e remoção de elementos:
+cpp
+Copy code
+meuVetor.push_back(10);   // Adiciona o valor 10 ao final do vetor
+meuVetor.pop_back();      // Remove o último elemento do vetor
+
+// Adicionar vários elementos de uma vez
+std::vector<int> novosElementos = {5, 15, 25};
+meuVetor.insert(meuVetor.end(), novosElementos.begin(), novosElementos.end());
+
+meuVetor.erase(meuVetor.begin() + 1); // Remove o segundo elemento
+Acesso a elementos:
+cpp
+Copy code
+int primeiroElemento = meuVetor[0];           // Acesso direto por índice
+int segundoElemento = meuVetor.at(1);         // Acesso por índice usando a função at()
+int ultimoElemento = meuVetor.back();         // Último elemento
+int tamanhoDoVetor = meuVetor.size();         // Tamanho do vetor
+bool vetorEstaVazio = meuVetor.empty();       // Verifica se o vetor está vazio
+Percorrendo um vetor:
+cpp
+Copy code
+for (int i = 0; i < meuVetor.size(); i++) {
+    // Faz algo com meuVetor[i]
+}
+
+for (int elemento : meuVetor) {
+    // Faz algo com cada elemento
+}
+Funções adicionais:
+A biblioteca <vector> oferece uma variedade de funções adicionais, como clear(), swap(), resize(), front(), entre outras.
+É altamente recomendável consultar a documentação oficial para obter informações detalhadas sobre todas as funções disponíveis.
+
+clear():
+Remove todos os elementos do vetor, deixando-o vazio.
+
+cpp
+Copy code
+meuVetor.clear();
+swap():
+Troca o conteúdo de dois vetores.
+
+cpp
+Copy code
+std::vector<int> vetor1 = {1, 2, 3};
+std::vector<int> vetor2 = {4, 5, 6};
+vetor1.swap(vetor2);
+resize():
+Altera o tamanho do vetor. Se o novo tamanho for maior que o tamanho atual, novos elementos serão adicionados com um valor padrão.
+
+cpp
+Copy code
+meuVetor.resize(10);        // Torna o vetor de tamanho 10
+meuVetor.resize(5, 42);     // Torna o vetor de tamanho 5 e preenche com o valor 42
+front() e back():
+Retorna uma referência para o primeiro e último elemento do vetor, respectivamente.
+
+cpp
+Copy code
+int primeiroElemento = meuVetor.front();
+int ultimoElemento = meuVetor.back();
+begin() e end():
+Retornam iteradores que apontam para o primeiro e um após o último elemento do vetor, respectivamente.
+Eles são frequentemente usados em loops para percorrer o vetor.
+
+cpp
+Copy code
+for (auto it = meuVetor.begin(); it != meuVetor.end(); ++it) {
+    // Faz algo com *it
+}
+rbegin() e rend():
+Retornam iteradores reversos, permitindo percorrer o vetor em ordem inversa.
+
+cpp
+Copy code
+for (auto it = meuVetor.rbegin(); it != meuVetor.rend(); ++it) {
+    // Faz algo com *it (percorrendo de trás para frente)
+}
+emplace_back():
+Insere um novo elemento no final do vetor, sem a necessidade de criar previamente o objeto.
+
+cpp
+Copy code
+meuVetor.emplace_back(20);   // Adiciona o valor 20 ao final do vetor
+reserve():
+Aloca espaço para um número específico de elementos, melhorando a eficiência em caso de inserções múltiplas.
+
+cpp
+Copy code
+meuVetor.reserve(100);  // Aloca espaço para 100 elementos
