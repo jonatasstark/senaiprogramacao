@@ -1,4 +1,5 @@
 // Trabalho Senai. Código para gerar números aleatórios e realizar uma Mega Sena.
+// Se o VSCode nao rodar, utilize outro compilador online
 // Grupo: Gabriel Lucas e Jonatas Gabriel
 #include <vector>
 #include <iostream>
@@ -86,7 +87,7 @@ int main(){ // programa principal
         if (acertos == 6){ // se acertar todos os numeros, exibe que o usuario ganhou e encerra o programa
             cout << "Parabens, voce ganhou 200 milhoes de reais!" << endl;
             cout << "Muito bom! voce acertou os 6 numeros" << endl;
-            cout << "Sorteios realizados: " << sorteiosRealizados << endl;
+            cout << "Sorteios realizados: " << sorteiosRealizados << endl; // exibe a quantidade de sorteios feitos
             cout << "Obrigado por jogar :)" << endl;
             break;
         }else{ // senao, exibe a quantidade de acertos
@@ -101,7 +102,7 @@ int main(){ // programa principal
 
         if (resposta == 'N' || resposta == 'n'){ // se resposta for não, encerra o programa, senao o programa continua
             cout << "Programa encerrado!" << endl;
-            cout << "Sorteios realizados: " << sorteiosRealizados << endl;
+            cout << "Sorteios realizados: " << sorteiosRealizados << endl; // exibe a quantidade de sorteios feitos
             cout << "Obrigado por jogar :)" << endl;
             break;
         }
